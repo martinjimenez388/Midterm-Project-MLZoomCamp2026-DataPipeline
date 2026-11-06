@@ -1,7 +1,22 @@
 This project repository is for the midterm project of Machine Learning ZoomCamp 2026. The objective is to select a dataset, identify a problem, and apply a machine learning approach to solve it. Additionally, technical aspects of a Python project are put into practice, such as documentation, reproducibility, environment management, and web deployment. For this stage of the course, the objective is not to select a complex problem but rather to present a machine learning solution to a simple problem in a well-structured manner.
 
-For this project, 
+For this project,
 
+## Prerequisites
+- Python >= 3.13.
+- uv library: `pip install uv`
+
+## Installation
+
+In a terminal, go to the project's path and run
+```
+uv sync
+```
+
+To use the jupyter notebook inside the project, run
+```
+uv run --with jupyter jupyter lab
+```
 ## Asset-price feature definitions
 
 Let $O_t$, $H_t$, $L_t$, $C_t$, and $V_t$ denote the open, high, low, close, and volume of an asset on trading session $t$. Let $C_{t-1}$ denote the close on the previous trading session.
