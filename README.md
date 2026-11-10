@@ -17,6 +17,22 @@ To use the jupyter notebook inside the project, run
 ```
 uv run --with jupyter jupyter lab
 ```
+to open this into your web browser, or choose the environment's kernel from the kernel's list if you open the notebook in VS Code.
+
+To load the model as a web service, move to the folder `src\nvidia_stock` inside the project's directory, and run
+```
+uv run uvicorn stock_api:app --host 0.0.0.0 --port 9696
+```
+Then, in the same directory, run the script that deploys and evaluates the model
+```
+uv run deploy_stock_predictor.py
+```
+
+Build the docker image by running in the project's head directory.
+```
+docker build -t predict-assets-price .
+```
+
 ## Asset-price feature definitions
 
 Let $O_t$, $H_t$, $L_t$, $C_t$, and $V_t$ denote the open, high, low, close, and volume of an asset on trading session $t$. Let $C_{t-1}$ denote the close on the previous trading session.

@@ -1,0 +1,25 @@
+FROM python:3.13.5-slim
+
+WORKDIR /app
+
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /uvx /bin/
+
+# Add the virtual environment's bin directory to the PATH so Python tools work globally
+ENV PATH="/app/.venv/bin:$PATH"
+
+# Copy the project configuration files into the container
+# pyproject.toml     → project metadata and dependencies
+# uv.lock            → locked dependency versions (for reproducibility)
+# .python-version    → Python version specification
+COPY pyproject.toml uv.lock .python-version ./
+
+# Install dependencies exactly as locked in uv.lock, without updating them
+RUN uv sync --locked --no-dev --no-install-project
+
+#Include the API script and the bin file with the model
+COPY src/nvidia_stock/stock_api.py src/nvidia_stock/RF_NVIDIA_model.bin ./
+
+# Expose TCP port 9696 so it can be accessed from outside the container
+EXPOSE 9696
+
+ENTRYPOINT ["uv", "run", "--no-project", "uvicorn", "stock_api:app", "--host", "0.0.0.0", "--port", "9696"]
