@@ -1,7 +1,13 @@
 import requests
- 
-url = 'http://localhost:9696/predict'
- 
+
+print("Are you deploying the model from the Railway web service?(y/n)")
+
+response = input().strip().lower()
+if response == 'y':
+    url = 'https://midterm-project-mlzoomcamp2026-datapipeline-production.up.railway.app/predict'
+else:
+    url = 'http://localhost:9696/predict'
+
 trading_session_date = '2018-02-20'
 todays_data = {
  'open': 6.03683106811,
