@@ -41,11 +41,11 @@ and run it in the same directory with the command
 ```
 docker run -it --rm -p 9696:9696 predict-assets-price
 ```
-Remember that even though the Docker image is run from the head directory, the script that evaluates the model is located in `src\nvidia_stock`.
+Remember that even though the Docker image is run from the head directory, the script that evaluates the model is located in `src/nvidia_stock`.
 
 The web service is served in the Railway cloud provider. To access this, run the deploy_stock_predictor.py script and select the `y` option when the program asks you if you are using the web service hosted on the cloud. The script already contains the service url
 ```
-midterm-project-mlzoomcamp2026-datapipeline-production.up.railway.app/predict
+https://midterm-project-mlzoomcamp2026-datapipeline-production.up.railway.app/predict
 ```
 
 If you are interested in using this web provider, it only requires you to enter the project's repository containing the Dockerfile (preferably in the main directory, otherwise specify the subdirectory), and then go to your service → Settings → Networking → Generate Domain.
