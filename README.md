@@ -56,7 +56,13 @@ If you are interested in using this web provider, it only requires you to enter 
 
 Let $O_t$, $H_t$, $L_t$, $C_t$, and $V_t$ denote the open, high, low, close, and volume of an asset on trading session $t$. Let $C_{t-1}$ denote the close on the previous trading session.
 
-The expressions below use decimal fractions. Multiply each result by $100$ if the feature is intended to be expressed in percent.
+The target variable `future weekly return` is not directly available in the provided dataset, so we compute it manually and add it to the dataframe as an additional column. It is computed as
+```math
+\text{weekly return pct}_t
+=
+\left(\frac{C_{t+7}-C_{t}}{C_{t}}\right)
+```
+The expressions below that are related to variations in price are expressed in percentage.
 
 ### Returns
 
