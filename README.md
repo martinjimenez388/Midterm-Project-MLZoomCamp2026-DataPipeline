@@ -52,9 +52,9 @@ If you are interested in using this web provider, it only requires you to enter 
 
 **Important note**: Railway only provides a finite amount of free credits for new users, and a free trial period of 30 days. So the web service will be available for deployment from Railway only during the peer-review period of this course's project. Afterwards, the web service will only be accessible via locally running the API.
 
-
+The following images show how the web service is enabled from Railway and how to use it once it is active on the cloud.
 ![Cloud-hosted web service redeployed](img/Rebuild_WebService.png)
-![Railway service running](img/WebSerRailway.png)
+![Railway service running](img/WebServRailway.png)
 ![How-to-use example](img/Show_RailwayServDeployed.png)
 
 ## Asset-price feature definitions
