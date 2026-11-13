@@ -17,7 +17,7 @@ In a terminal, go to the project's path and run
 uv sync
 ```
 
-To use the jupyter notebook inside the project, run
+To use the jupyter notebook inside the project, you can either run
 ```
 uv run --with jupyter jupyter lab
 ```
@@ -52,9 +52,10 @@ If you are interested in using this web provider, it only requires you to enter 
 
 **Important note**: Railway only provides a finite amount of free credits for new users, and a free trial period of 30 days. So the web service will be available for deployment from Railway only during the peer-review period of this course's project. Afterwards, the web service will only be accessible via locally running the API.
 
-```
-![description](https://site.com/image.png)
-```
+
+![description]([https://site.com/image.png](https://github.com/martinjimenez388/Midterm-Project-MLZoomCamp2026-DataPipeline/main/img/Screenshot 2026-11-12 162013.png))
+![description]([https://site.com/image.png](https://github.com/martinjimenez388/Midterm-Project-MLZoomCamp2026-DataPipeline/main/img/Screenshot 2026-11-12 162401.png))
+![description]([https://site.com/image.png](https://github.com/martinjimenez388/Midterm-Project-MLZoomCamp2026-DataPipeline/main/img/Screenshot 2026-11-12 162500.png))
 
 ## Asset-price feature definitions
 
