@@ -52,6 +52,10 @@ If you are interested in using this web provider, it only requires you to enter 
 
 **Important note**: Railway only provides a finite amount of free credits for new users, and a free trial period of 30 days. So the web service will be available for deployment from Railway only during the peer-review period of this course's project. Afterwards, the web service will only be accessible via locally running the API.
 
+```
+![description](https://site.com/image.png)
+```
+
 ## Asset-price feature definitions
 
 Let $O_t$, $H_t$, $L_t$, $C_t$, and $V_t$ denote the open, high, low, close, and volume of an asset on trading session $t$. Let $C_{t-1}$ denote the close on the previous trading session.

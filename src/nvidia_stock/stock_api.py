@@ -4,6 +4,7 @@ import pickle
 
 #Dump the model
 model_file = 'RF_NVIDIA_model.bin'
+
 with open(model_file, 'rb') as f_in:
     pipe = pickle.load(f_in)
 
